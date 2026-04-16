@@ -1,0 +1,14 @@
+<!DOCTYPE html><html>
+<head>
+  <title>PDF Finder</title>
+</head><body style="text-align:center; font-family:Arial;">  <h1>PDF Finder</h1>  <input type="text" id="num" placeholder="Enter number">
+  <button onclick="openPDF()">Open PDF</button><br><br>
+
+  <iframe id="viewer" width="90%" height="500px"></iframe>  <script>
+    function openPDF() {
+      var n = document.getElementById("num").value;
+      var path = "pdfs/" + n + ".pdf";
+      document.getElementById("viewer").src = path;
+    }
+  </script></body>
+</html>
